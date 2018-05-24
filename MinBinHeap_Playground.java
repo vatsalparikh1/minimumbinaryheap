@@ -7,8 +7,7 @@ public class MinBinHeap_Playground {
   }
   
   public static void TestBuild(){ 
-    // constructs a new minbinheap, constructs an array of EntryPair, 
-    // passes it into build function. Then print collection and heap.
+    
     MinBinHeap mbh= new MinBinHeap();
     
     
@@ -52,8 +51,7 @@ public class MinBinHeap_Playground {
   }
   
   public static void printHeapCollection(EntryPair[] e) { 
-    //this will print the entirety of an array of entry pairs you will pass 
-    //to your build function.
+    
     System.out.println("Printing Collection to pass in to build function:");
     for(int i=0;i < e.length;i++){
       System.out.print("("+e[i].value+","+e[i].priority+")\t");
@@ -62,7 +60,7 @@ public class MinBinHeap_Playground {
   }
   
   public static void printHeap(EntryPair[] e,int len) { 
-    //pass in mbh.getHeap(),mbh.size()... this method skips over unused 0th index....
+
     System.out.println("Printing Heap");
     for(int i=1;i < len+1;i++){
       System.out.print("("+e[i].value+","+e[i].priority+")\t");
