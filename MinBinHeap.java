@@ -3,18 +3,14 @@ package MinBinHeap_A3;
 public class MinBinHeap implements Heap_Interface {
   private EntryPair[] array; //load this array
   private int size;
-  private static final int arraySize = 10000; //Everything in the array will initially 
-                                              //be null. This is ok! Just build out 
-                                              //from array[1]
+  private static final int arraySize = 10000; 
 
   public MinBinHeap() {
     this.array = new EntryPair[arraySize];
-    array[0] = new EntryPair(null, -100000); //0th will be unused for simplicity 
-                                             //of child/parent computations...
-                                             //the book/animation page both do this.
+    array[0] = new EntryPair(null, -100000); 
   }
     
-  //Please do not remove or modify this method! Used to test your entire Heap.
+
   @Override
   public EntryPair[] getHeap() { 
     return this.array;
@@ -46,7 +42,7 @@ public void insert(EntryPair entry) {
 @Override
 public void delMin() {
 	
-	if(size() <= 0){ // if there is nothing to delete
+	if(size() <= 0){ 
 		return;
 	}
 	
@@ -59,7 +55,7 @@ public void delMin() {
 }
 
 @Override
-public EntryPair getMin() { //return min element (root)
+public EntryPair getMin() {
 	
 	if(size() <= 0){
 		return null;
@@ -93,7 +89,6 @@ public void build(EntryPair[] entries) {
 }
 
 
-//only call if there is a left child
 public void bubbleDown(int index){
 	int leftIndex = index*2;
 	int rightIndex = (index*2) + 1;
